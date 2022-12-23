@@ -1,0 +1,21 @@
+{
+    "name": "cblink/supplier-sdk",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jinjun",
+            "email": "757258777@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "cblink-service/foundation": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cblink\\Supplier\\": "src"
+        }
+    }
+}
