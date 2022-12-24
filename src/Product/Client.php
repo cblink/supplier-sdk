@@ -2,7 +2,7 @@
 
 namespace Cblink\Supplier\Product;
 
-use Cblink\Supplier\Kernel\BaseApi;
+use Cblink\Service\Foundation\BaseApi;
 
 class Client extends BaseApi
 {
