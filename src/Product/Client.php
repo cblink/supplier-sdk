@@ -121,4 +121,27 @@ class Client extends BaseApi
         return $this->httpGet(sprintf('/api/product/%s/source', $id), $query);
     }
 
+    /**
+     * 获取商品库存
+     *
+     * @param array $query
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getProductStock(array $query = [])
+    {
+        return $this->httpGet('/api/stock/product', $query);
+    }
+
+    /**
+     * 获取sku库存
+     *
+     * @param array $query
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getSkuStock(array $query = [])
+    {
+        return $this->httpGet('/api/stock/sku', $query);
+    }
 }

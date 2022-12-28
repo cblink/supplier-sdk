@@ -18,5 +18,16 @@ class Client extends BaseRequestApi
         return $this->httpPost('/api/order', $data);
     }
 
+    /**
+     * 申请退款
+     *
+     * @param array $data
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function refund(array $data = [])
+    {
+        return $this->httpPost('/api/order/refund', $data);
+    }
 
 }
