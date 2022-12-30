@@ -2,9 +2,9 @@
 
 namespace Cblink\Supplier\Order;
 
-use Cblink\Service\Foundation\BaseRequestApi;
+use Cblink\Service\Foundation\BaseApi;
 
-class Client extends BaseRequestApi
+class Client extends BaseApi
 {
     /**
      * 创建订单
