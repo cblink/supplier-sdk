@@ -19,15 +19,16 @@ class Client extends BaseApi
     }
 
     /**
-     * 申请退款
+     * 更新ext
      *
-     * @param array $data
+     * @param $id
+     * @param string $extId
      * @return array|\Psr\Http\Message\ResponseInterface|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function refund(array $data = [])
+    public function updateExt($id, string $extId)
     {
-        return $this->httpPost('/api/order/refund', $data);
+        return $this->httpPut(sprintf('/api/order/%s/ext', $id), ['ext_id' => $extId]);
     }
 
 }
