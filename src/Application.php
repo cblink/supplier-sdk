@@ -3,6 +3,7 @@
 namespace Cblink\Supplier;
 
 use Cblink\Service\Foundation\Container;
+use Cblink\Service\Foundation\Providers\BaseServiceProvider;
 use Hyperf\Utils\Collection;
 
 
@@ -16,6 +17,7 @@ use Hyperf\Utils\Collection;
 class Application extends Container
 {
     protected array $providers = [
+        BaseServiceProvider::class,
         Kernel\ServiceProvider::class,
         Product\ServiceProvider::class,
         Order\ServiceProvider::class,
