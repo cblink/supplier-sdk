@@ -8,6 +8,6 @@ class AccessToken extends \Cblink\Service\Foundation\AccessToken
 {
     public function getToken(RequestInterface $request = null, array $requestOptions = [])
     {
-        return $this->app->config->get('api_token');
+        return sprintf('Bearer %s', $this->app->config->get('api_token'));
     }
 }
